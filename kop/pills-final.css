@@ -1,0 +1,375 @@
+html {
+  background-color: #FFD300;
+}
+
+body {
+  background-color: #FFD300;
+
+}
+
+h1 {
+  font-family: Comic Sans MS, Comic Sans, sans-serif;
+  font-size: 80px;
+  color:#0059AD;
+  justify-content: center;
+  text-align: center;
+  margin: 0px
+}
+
+h2 {
+  font-family: Comic Sans MS, Comic Sans, sans-serif;
+  font-size: 40px;
+  color:#0879A6;
+  justify-content: center;
+  text-align: center;
+  margin: 0px;
+
+}
+
+a {
+  color: #0879A6;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#0059AD;
+}
+
+.wrapper {
+  height: 200px;
+  width: 100%;
+  background-color:#FFD300;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+
+.container {
+  width: 90%;
+  height: 250px;
+  position: relative;
+}
+
+.shape-circle {
+  width: 65px;
+  height: 65px;
+  background: #E20105;
+  border-radius: 50%;
+  margin: 3px
+}
+
+.shape-oval {
+  width: 100px;
+  height: 60px;
+  background: #E20105;
+  border-radius: 50px / 30px;
+  margin: 3px
+}
+
+.shape-capsule {
+  width: 130px;
+  height: 50px;
+  background: #E20105;
+  border-radius: 60px;
+  margin: 3px
+}
+  
+.shape-square {
+  width: 60px;
+  height: 60px;
+  background: #E20105;
+  border-radius: 15px;
+  margin: 3px
+}
+
+.shape-rectangle {
+  width: 120px;
+  height: 60px;
+  background: #E20105;
+  border-radius: 20px;
+  margin: 3px
+}
+
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 60px solid #E20105;
+  margin: 3px
+}
+
+.shape-octagon {
+  width: 55px;
+  height: 70px;
+  background: #E20105;
+  position: relative;
+  margin: 3px
+}
+
+.shape-octagon:before {
+  content: "";
+  width: 25px;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 15px solid #E20105;
+  border-left: 15px solid #FFD300;
+  border-right: 15px solid #FFD300;
+}
+.shape-octagon:after {
+  content: "";
+  width: 25px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 15px solid #E20105;
+  border-left: 15px solid  #FFD300;
+  border-right: 15px solid  #FFD300;
+}
+
+.shape-diamond {
+  width: 40px;
+  height: 90px;
+  background-color: #E20105;
+  transform: skew(45deg) rotate(70deg);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 33px;
+  margin-right: 33px
+}
+
+.circle {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: auto;
+  cursor: move;
+}
+
+.oval {
+  position: absolute;
+  /* top: 200px;
+  left: 50px; */
+  display: block;
+  width: 130px;
+  height: auto;
+  cursor: move;
+}
+
+.square {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: auto;
+  cursor: move;
+}
+
+.rectangle {
+  position: absolute;
+  display: block;
+  width: 140px;
+  height: auto;
+  cursor: move;
+}
+
+.capsule {
+  position: absolute;
+  display: block;
+  width: 140px;
+  height: auto;
+  cursor: move;
+}
+
+.triangle {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: auto;
+  cursor: move;
+}
+
+.diamond {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: auto;
+  cursor: move;
+}
+
+.octagon {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: auto;
+  cursor: move;
+}
+
+/* -------- */
+
+/* About Button  */
+button {
+  font-family: Comic Sans MS, Comic, sans-serif;
+  font-size: 20px;
+  background-color: #069903;
+  color: white;
+  width: 130px;
+  height: 80px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 3px 3px;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {outline:0;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border-radius: 40px;
+  width: 70%; /* Could be more or less, depending on screen size */
+  font-family: Comic Sans MS, Comic, sans-serif;
+  color: #069903;
+  font-size: 35px;
+}
+
+/* The Close Button */
+.close {
+  color:#E20105;
+  float: right;
+  padding: 10px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #069903;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* -------- */
+
+/* Sucess Button */
+#modalContainer {
+  background-color:rgba(0, 0, 0, 0.116);
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:10000;
+}
+
+#alertBox {
+  position:relative;
+  width:800px;
+  min-height: 250px;
+  margin-top: 300px;
+  border-radius: 20px;
+  border: none;
+  background-color:white;
+}
+
+#modalContainer > #alertBox {
+  position:fixed;
+}
+
+#alertBox p {
+  font-family: Comic Sans MS, Comic Sans, sans-serif;
+  font-size: 30px;
+  background-color: white;
+  color:#0059AD;
+  height:100px;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+
+#alertBox #closeBtn {
+  display:block;
+  position:relative;
+  margin: 5px auto;
+  padding: 7px;
+  width: 100px;
+  height: 30px;
+  font-family: Comic Sans MS, Comic Sans, sans-serif;
+  font-size: 18px;
+  text-align:center;
+  color: white;
+  background-color:#0059AD;
+  border-radius: 20px;
+  text-decoration:none;
+  outline: none
+}
+
+.small {
+  font-size: 20px;
+}
+
+/* -------- */
+
+@media only screen and (max-width: 700px) {
+
+  button {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  
+  .container {
+    width: 70%;
+  }
+
+  .modal-content {
+    font-size: 16px;
+  }
+
+  #alertBox p{
+    font-size: 20px;
+  }
+
+  .small {
+    font-size: 12px;
+  }
+
+  #alertBox {
+    width: 85%;
+    min-height: 250px;
+    margin-top: 100px;
+  }
+  
+}

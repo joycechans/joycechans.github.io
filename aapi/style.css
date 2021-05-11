@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Petit+Formal+Script&display=swap");
+
+html {
+	overflow: hidden;
+	box-sizing: border-box;
+    font-family: Helvetica, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    font-family: Helvetica, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    background-image: url(wallbackground1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-color: #000;
+}
+
+body {
+	-webkit-overflow-scroling: touch;
+	color: white;
+	font-family: Helvetica, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img {
+	display: block;
+	width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-flow: column nowrap;
+	transform-style: preserve-3d;
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.absolute {
+	position: absolute;
+}
+.heading {
+	font-size: 2.5vh;
+	padding: 8vw;
+	text-transform: capitalize;
+}
+
+.scroll-content {
+	transform-style: preserve-3d;
+	width: 100vw;
+	position: relative;
+}
+
+.main {
+	transform-style: preserve-3d;
+	width: 100vw;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.parallax {
+	width: 100vw;
+	height: auto;
+	transform-style: preserve-3d;
+	position: relative;
+	margin-bottom: 80vh;
+	padding: 0;
+	z-index: 1000;
+	font-family: "Petit Formal Script", cursive;
+	pointer-events: none;
+}
+
+	@media (min-width: 50em) {
+        .parallax {
+            padding: 10vw;
+            margin-bottom: 50vh;
+            pointer-events: none;
+        }
+	}
+
+	.title {
+		left: 90vw;
+	}
+	.right {
+		right: 7vw;
+	}
+
+	.parallax__img {
+		padding: 10vw;
+		transform: translateZ(-2px) scale(3);
+		/* $r: ((2840/4544) * 100) + vw; 
+		top: calc(((100vh - #{$r}) / 4) * -2); */
+	}
+
+	.title {
+		position: relative;
+	}
+	.parallax__title {
+		position: relative;
+		z-index: 122;
+		padding: 10vw 4vw;
+		top: -10vw;
+		transform: translateZ(-1px) scale(1.5);
+	}
+
+
+[data-scroll-content="true"] {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+footer {
+	padding: 8vw;
+	font-size: 1rem;
+	margin-top: 8vw;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: #000;
+	z-index: 1;
+	pointer-events: none;
+	opacity: 0;
+	animation: fade 2s ease-in forwards;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+}
